@@ -1,0 +1,38 @@
+header {
+  background-color: white;
+  padding: 0;
+  -webkit-box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
+  box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
+}
+
+a {
+  color: #fff;
+  background-color: #965f37;
+}
+
+a:hover {
+  background-color: #4b2814;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+a.logo {
+  font-weight: bold;
+  padding: 1em;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li a {
+  padding: 1em;
+  display: inline-block;
+}
