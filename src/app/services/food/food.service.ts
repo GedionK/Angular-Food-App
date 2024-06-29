@@ -1,33 +1,33 @@
 import { Injectable } from '@angular/core';
 import { Food } from '../../shared/models/Food';
+import { Tag } from '../../shared/models/tags';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FoodService {
+  constructor() {}
 
-  constructor() { }
-
-  getAll():Food[]{
-    return[
+  getAll(): Food[] {
+    return [
       {
         id: 1,
-        name: 'Pizza Pepperoni',
+        name: 'Doro Wet',
         cookTime: '10-20',
         price: 10,
-        favorite: false,
-        origins: ['italy'],
+        favorite: true,
+        origins: ['Ethiopia'],
         stars: 4.5,
         imageUrl: '/assets/images/foods/food-1.jpg',
-        tags: ['FastFood', 'Pizza', 'Lunch'],
+        tags: ['SlowFood', 'Lunch'],
       },
       {
         id: 2,
-        name: 'Meatball',
+        name: 'BeyeAynetu',
         price: 20,
         cookTime: '20-30',
         favorite: true,
-        origins: ['persia', 'middle east', 'china'],
+        origins: ['Ethiopia'],
         stars: 4.7,
         imageUrl: '/assets/images/foods/food-2.jpg',
         tags: ['SlowFood', 'Lunch'],
@@ -38,7 +38,7 @@ export class FoodService {
         price: 5,
         cookTime: '10-15',
         favorite: false,
-        origins: ['germany', 'us'],
+        origins: ['Germany', 'USA'],
         stars: 3.5,
         imageUrl: '/assets/images/foods/food-3.jpg',
         tags: ['FastFood', 'Hamburger'],
@@ -49,7 +49,7 @@ export class FoodService {
         price: 2,
         cookTime: '15-20',
         favorite: true,
-        origins: ['belgium', 'france'],
+        origins: ['Belgium', 'France'],
         stars: 3.3,
         imageUrl: '/assets/images/foods/food-4.jpg',
         tags: ['FastFood', 'Fry'],
@@ -60,7 +60,7 @@ export class FoodService {
         price: 11,
         cookTime: '40-50',
         favorite: false,
-        origins: ['india', 'asia'],
+        origins: ['India', 'Asia'],
         stars: 3.0,
         imageUrl: '/assets/images/foods/food-5.jpg',
         tags: ['SlowFood', 'Soup'],
@@ -71,11 +71,35 @@ export class FoodService {
         price: 9,
         cookTime: '40-50',
         favorite: false,
-        origins: ['italy'],
+        origins: ['Italy'],
         stars: 4.0,
         imageUrl: '/assets/images/foods/food-6.jpg',
         tags: ['FastFood', 'Pizza', 'Lunch'],
       },
-    ]
+    ];
+  }
+
+  getAllFoodsBySearchTerm(searchTerm: string): Food[] {
+    return this.getAll().filter((food) =>
+      food.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
+  getAllFoodsByTag(tag: string): Food[] {
+    return tag == 'All'
+      ? this.getAll()
+      : this.getAll().filter((food) => food.tags?.includes(tag));
+  }
+
+  getAllTags(): Tag[] {
+    return [
+      { name: 'All', count: 14 },
+      { name: 'FastFood', count: 4 },
+      { name: 'Pizza', count: 2 },
+      { name: 'Lunch', count: 3 },
+      { name: 'SlowFood', count: 2 },
+      { name: 'Hamburger', count: 1 },
+      { name: 'Fry', count: 1 },
+      { name: 'Soup', count: 1 },
+    ];
   }
 }
