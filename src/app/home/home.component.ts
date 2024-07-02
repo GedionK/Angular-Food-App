@@ -3,14 +3,14 @@ import { FoodService } from '../services/food/food.service';
 import { CommonModule } from '@angular/common';
 import { Food } from '../shared/models/Food';
 import { defineComponents, IgcRatingComponent } from 'igniteui-webcomponents';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { TagsComponent } from '../tags/tags.component';
 defineComponents(IgcRatingComponent);
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SearchComponent, TagsComponent],
+  imports: [CommonModule, SearchComponent, TagsComponent,RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
