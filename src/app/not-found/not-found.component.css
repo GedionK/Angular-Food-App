@@ -14,15 +14,16 @@ div img{
 
 div a{
     font-size: 1rem;
-    background-color: #965f37;
+    background-color: #EF3340;
     color: white;
     border-radius: 10rem;
     padding: .7rem 1rem;
     margin: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
 div a:hover{
 
-    background-color: #4b2814;
+    background-color: #c10b17;
     cursor: pointer;
 }

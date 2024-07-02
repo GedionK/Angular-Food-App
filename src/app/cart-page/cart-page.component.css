@@ -54,12 +54,13 @@ ul li select{
 }
 
 ul .remove-button{
-    border-radius: 1rem;
+    border-radius: .5rem;
     border: none;
     padding: .5rem;
     color: red;
     opacity: .7;
     outline: none;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
 ul .remove-button:hover{

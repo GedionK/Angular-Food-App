@@ -1,26 +1,39 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+
 header {
   background-color: white;
   padding: 0;
   -webkit-box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
   -moz-box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
   box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
-  position: fixed; /* Make the header stick to the top */
-  top: 0; /* Align it to the top */
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it is above other elements */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-a {
-  color: #fff;
-  background-color: #965f37;
+a.logo {
+  color: #fff; 
+  background: linear-gradient(45deg, #00A859 25%, #FCD116 50%, #EF3340 75%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+a.logo:hover {
+  opacity: 0.9; 
+  cursor: pointer; 
 }
 
-a:hover {
-  background-color: #4b2814;
-  color: white;
-  cursor: pointer;
+a.cart {
+  color: #fff; 
+  background-color:  #EF3340;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
+a.cart:hover {
+  color: #fff; 
+  background-color:  #c10b17;
+  cursor: pointer; 
+}
 .container {
   margin: 0 auto;
   display: flex;

@@ -3,7 +3,6 @@ div{
     flex-wrap: wrap;
 }
 div a{
-
     background-color: #f0f0f0;
     padding: .3rem 1rem;
     margin: .2rem .15rem;
@@ -12,4 +11,11 @@ div a{
     font-size: 1rem;
     text-decoration: none;
     color: black;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+
+}
+
+div a:hover{
+     background-color:  #EF3340;
+     color: white;
 }

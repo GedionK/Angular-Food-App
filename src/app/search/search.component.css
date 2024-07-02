@@ -24,13 +24,14 @@ div button{
     font-size: 1rem;
     border: none;
     border-radius: 0 10rem 10rem 0;
-    background-color: #965f37;
+    background-color: #EF3340;
     color: white;
     outline: none;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
 div button:hover{
     cursor: pointer;
-    background-color: #4b2814;
+    background-color: #c10b17;
 }
 
