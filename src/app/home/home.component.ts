@@ -6,11 +6,12 @@ import { defineComponents, IgcRatingComponent } from 'igniteui-webcomponents';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { TagsComponent } from '../tags/tags.component';
+import { NotFoundComponent } from '../not-found/not-found.component';
 defineComponents(IgcRatingComponent);
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SearchComponent, TagsComponent,RouterModule],
+  imports: [CommonModule, SearchComponent, TagsComponent,NotFoundComponent,RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
