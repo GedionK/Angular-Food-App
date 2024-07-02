@@ -15,6 +15,7 @@ defineComponents(IgcRatingComponent);
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
+
 export class HomeComponent implements OnInit {
   foods: Food[] = [];
   constructor(
@@ -29,8 +30,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.isLoading = false;
-    }, 3000);
-    
+    }, 750);
+
     this.route.params.subscribe((params) => {
       if (params['searchTerm']) {
         this.foods = this.foodService.getAllFoodsBySearchTerm(
