@@ -101,8 +101,6 @@ export class FoodService {
       { name: 'Breakfast', count: 1 },
       { name: 'Lunch', count: 3 },
       { name: 'Dinner', count: 3 },
-      
-  
     ];
   }
 }

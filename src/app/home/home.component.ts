@@ -22,7 +22,15 @@ export class HomeComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
+  isLoading: boolean = true;
+
+
+
   ngOnInit(): void {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3000);
+    
     this.route.params.subscribe((params) => {
       if (params['searchTerm']) {
         this.foods = this.foodService.getAllFoodsBySearchTerm(
