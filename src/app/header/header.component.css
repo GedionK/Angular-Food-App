@@ -4,6 +4,10 @@ header {
   -webkit-box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
   -moz-box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
   box-shadow: 0px 10px 7px -14px rgba(66, 68, 90, 1);
+  position: fixed; /* Make the header stick to the top */
+  top: 0; /* Align it to the top */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it is above other elements */
 }
 
 a {
