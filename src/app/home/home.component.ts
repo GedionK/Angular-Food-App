@@ -11,11 +11,16 @@ defineComponents(IgcRatingComponent);
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SearchComponent, TagsComponent,NotFoundComponent,RouterModule],
+  imports: [
+    CommonModule,
+    SearchComponent,
+    TagsComponent,
+    NotFoundComponent,
+    RouterModule,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-
 export class HomeComponent implements OnInit {
   foods: Food[] = [];
   constructor(
@@ -24,8 +29,6 @@ export class HomeComponent implements OnInit {
   ) {}
 
   isLoading: boolean = true;
-
-
 
   ngOnInit(): void {
     setTimeout(() => {
